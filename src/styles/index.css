@@ -1,0 +1,57 @@
+body {
+  padding: 0;
+  font-family: Archivo;
+}
+* {
+  box-sizing: border-box;
+  line-height: normal;
+  font-family: inherit;
+  margin: unset;
+}
+a {
+  display: block;
+}
+ul {
+  margin: 0;
+  margin-inline: unset !important;
+  padding: 0;
+  list-style: none;
+}
+.ReactModal__Overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background: transparent;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #6b6b6b;
+  border-radius: 10px;
+}
+
+@media (min-width: 1050px) {
+  .flex-images {
+    /* Reset any styles that you want to disable for screens larger than 1050px */
+    /* For example: */
+    justify-content: initial;
+    align-items: initial;
+    max-width: initial;
+    margin: initial;
+    flex-direction: initial;
+  }
+}
+@media (max-width: 1050px) {
+  .content-div {
+    order: 2; /* Change order to make it display after the image */
+  }
+
+  .image-div, .content-div {
+    width: 100%; /* Set width to 100% to make them full-width */
+  }
+}

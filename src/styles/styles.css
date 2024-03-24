@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    overflow: hidden; /* Hide overflow */
+    position: relative;
+  }
+  
+  .row {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .box {
+    width: 140px;
+    height: 160px;
+    background-color: #D9D9D9;
+    border-radius: 16px;
+  }
+  
+  .red-box {
+    background-color: red;
+  }
+  
+  .third-box {
+    background-color: #C77676; /* Color for the third box */
+  }
+  
+  .fourth-box {
+    background-color: #9B3636; /* Color for the fourth box */
+  }
+  
+  .row:nth-child(2n) .box {
+    animation: moveRowLeftToRight 10s linear infinite;
+  }
+  
+  .row:nth-child(2n+1) .box {
+    animation: moveRowRightToLeft 10s linear infinite;
+  }
+  
+  @keyframes moveRowLeftToRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(calc(100% + 4px)); /* Adjusted for gap */
+    }
+  }
+  
+  @keyframes moveRowRightToLeft {
+    0% {
+      transform: translateX(calc(100% + 4px)); /* Adjusted for gap */
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
